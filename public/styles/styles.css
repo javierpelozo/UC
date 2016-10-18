@@ -1,0 +1,1879 @@
+@import 'https://fonts.googleapis.com/css?family=Lato';
+@font-face {
+    font-family: "Times Pro Roman";
+    src: url(fuente-uca) format(ttf);
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Lato', serif;
+    overflow-x: hidden !important;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(47, 47, 47);
+}
+
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lato', sans-serif;
+}
+
+h2 {
+    color: rgb(49, 51, 56);
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0px;
+    padding-bottom: 10px;
+}
+
+img {
+    border: none;
+}
+
+.slides-navigation a {
+    position: absolute;
+    display: block;
+    height: 95px;
+    width: 55px;
+}
+
+.slides-navigation a.prev {
+    background-image: url("../images/navSlider.png");
+    background-repeat: no-repeat;
+    background-position: left -240px center;
+    left: 0;
+}
+
+.slides-navigation a.next {
+    background-image: url("../images/navSlider.png");
+    background-position: left -316px center;
+    background-repeat: no-repeat;
+    right: 0;
+}
+
+.slides-navigation a.prev:hover {
+    background-position: left center;
+}
+
+.slides-navigation a.next:hover {
+    background-position: left -75px center;
+}
+
+.volverArriba {
+    border: 3px solid rgb(240, 241, 243);
+    border-radius: 5px;
+    bottom: 20px;
+    display: inline-block;
+    height: 54px;
+    opacity: 0;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    width: 54px;
+    z-index: 100;
+    transition: all 0.5s;
+    background: url("../images/volverArriba.png") 13px 12px no-repeat scroll rgb(255, 255, 255);
+}
+
+.volverArriba:hover {
+    text-decoration: none;
+    outline: none;
+    background-position: 13px -50px;
+}
+
+#cabecera {
+    float: left;
+    display: inline;
+    width: 100%;
+    background-color: rgb(34, 51, 89);
+}
+
+.areaDeMenu {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.navbar-default .navbar-brand {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-family: "Times Pro Roman";
+    /*    font-weight: bold; */
+    margin-top: 15px;
+}
+
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+}
+
+.navbar-default {
+    border-color: transparent;
+    background-color: rgb(34, 51, 89);
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: rgb(255, 255, 255);
+    padding: 30px 15px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    background-color: transparent;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    background-color: rgb(34, 51, 89);
+}
+
+.navbar-nav > li > .dropdown-menu::before {
+    border-bottom-width: 15px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(34, 51, 89);
+    border-left-width: 15px;
+    border-left-style: solid;
+    border-left-color: transparent;
+    border-right-width: 15px;
+    border-right-style: solid;
+    border-right-color: transparent;
+    content: "";
+    height: 0px;
+    position: absolute;
+    right: 25px;
+    top: -15px;
+    width: 0px;
+}
+
+.navbar-nav > li > .dropdown-menu li a {
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: rgba(255, 255, 255, 0.298039);
+    color: rgb(255, 255, 255);
+    display: block;
+    opacity: 0.8;
+    padding: 10px;
+    transition: all 0.5s;
+}
+
+.navbar-nav > li > .dropdown-menu > li:last-child a {
+    border-bottom-width: medium;
+    border-bottom-style: none;
+}
+
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+    background-color: transparent;
+}
+
+#slider {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.areaSlider {
+    display: inline;
+    float: left;
+    margin-top: 80px;
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+}
+
+.areaSliderCenter {
+    left: 5%;
+    position: absolute;
+    top: 25%;
+    width: 50%;
+}
+
+.areaSliderRight {
+    left: 38%;
+}
+
+.areaSliderCenter h2 {
+    font-family: 'Lato', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 33px;
+    padding: 8px;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    background-color: rgba(49, 59, 61, 0.6);
+}
+
+.areaSliderCenter p {
+    color: rgb(255, 255, 255);
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    background-color: rgba(49, 59, 61, 0.6);
+}
+
+.botonSlider {
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    margin-top: 10px;
+    padding: 9px 15px;
+    text-decoration: none;
+    transition: all 0.5s;
+    background: rgba(49, 59, 61, 0.6);
+}
+
+.botonSlider:hover,
+.botonSlider:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.siguiente,
+.anterior {
+    display: none !important;
+    color: aliceblue;
+    background-color: aliceblue;
+}
+
+.areaSlider:hover .siguiente {
+    display: block !important;
+}
+
+.areaSlider:hover .anterior {
+    display: block !important;
+}
+
+
+/*
+*******************************************************
+*/
+
+#sobreNosotros {
+    display: inline;
+    padding: 100px;
+    width: 100%;
+}
+
+.seccionSobreNosotros {
+    padding-top: 100px;
+    display: inline;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+
+.seccionSobreNosotros p {
+    line-height: 25px;
+}
+
+.titulo {
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.titulo::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 450px;
+    height: 5px;
+}
+
+.seccionNoticias {
+    float: left;
+    display: inline;
+    width: 100%;
+    padding-left: 15px;
+}
+
+.noticiasBorder li {
+    margin-bottom: -2px;
+}
+
+.noticiasBorder li a {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.noticiasBorder li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.seccionNuevasNoticias {
+    margin-top: 15px;
+}
+
+.seccionNuevasNoticias li {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(204, 204, 204);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.seccionNuevasNoticias li:last-child {
+    border-bottom-style: none;
+}
+
+.noticiasImg {
+    display: block;
+    height: 70px;
+    width: 100px;
+}
+
+.noticiasImg > img {
+    width: 100%;
+    height: 110%;
+}
+
+.seccionNuevasNoticias .media-body > a {
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 5px;
+    transition: all 0.3s;
+}
+
+.fechaNoticia {
+    color: rgb(202, 204, 204);
+}
+
+.verTodos {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(204, 204, 204);
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.verTodos:hover,
+.verTodos:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+#porqueElegir {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.porqueElegir-top {
+    float: left;
+    display: inline;
+    width: 100%;
+    padding: 60px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.descPorqueElegir {
+    float: left;
+    display: inline;
+    width: 100%;
+    text-align: center;
+}
+
+.tituloPorqueElegir {
+    float: left;
+    display: inline;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title_area span {
+    display: inline-block;
+    text-align: center;
+    height: 5px;
+    width: 50px;
+}
+
+.titulo2PorqueElegir {
+    padding-bottom: 0px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.iconPorqueElegir {
+    border-radius: 25px;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    height: 150px;
+    text-align: center;
+    width: 150px;
+}
+
+.iconPorqueElegir span {
+    display: inline-block;
+    font-size: 50px;
+    height: 100%;
+    line-height: 160px;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.descPorqueElegir:hover .iconPorqueElegir span {
+    /*transform: skewX(25deg);*/
+}
+
+.descPorqueElegir > h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+.descPorqueElegir > p {
+    font-size: 13px;
+}
+
+#nuestrasCarreras {
+    float: left;
+    display: inline;
+    width: 100%;
+    padding: 60px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.nuestrasCarreras-lista {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.navCarreras {}
+
+.navCarreras li {
+    display: block;
+    float: left;
+    margin-right: 30px;
+    width: 31%;
+}
+
+.navCarreras li:last-child {
+    margin-right: 0px;
+}
+
+.descripcionCarrera {
+    border: 1px solid rgb(239, 239, 239);
+    display: inline;
+    float: left;
+    min-height: 150px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.desCarreraImg {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.desCarreraImg img {
+    display: block;
+    position: relative;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.desCarreraImg .card {
+    transform: translateY(100%);
+    opacity: 100;
+    transition: all 0.5s ease-in-out;
+    background-color: rgba(34, 51, 89, 0.8);
+}
+
+.desCarreraImg .card,
+.desCarreraImg .contenido {
+    left: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+
+.desCarreraImg:hover .card {
+    transform: translateY(0);
+}
+
+.desCarreraImg:hover img {
+    transform: translateX(-100%);
+}
+
+.carreras-info {
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 27%;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+.carreras-info:hover,
+.carreras-info:focus {
+    text-decoration: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+}
+
+.contenidoDesc {
+    float: left;
+    display: inline;
+    width: 100%;
+    padding: 10px;
+}
+
+.nombreCarrera {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(239, 239, 239);
+    font-size: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nombreCarrera a {
+    transition: all 0.2s;
+}
+
+.nombreCarrera a:hover {
+    text-decoration: none;
+    outline: none;
+}
+
+.duracionCarrera {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(239, 239, 239);
+    padding-bottom: 10px;
+}
+
+.duracionCarrera > span {
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.navCarreras .slick-prev {
+    left: -37px;
+    height: 100px;
+    width: 36px;
+    background-image: url("../images/carrerasPrev.png");
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.navCarreras .slick-next {
+    height: 100px;
+    width: 36px;
+    right: -6px;
+    background-image: url("../images/carrerasNext.png");
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.navCarreras .slick-prev,
+.navCarreras .slick-next {
+    top: 40%;
+}
+
+#footer {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.footer_top {
+    float: left;
+    display: inline;
+    width: 100%;
+    padding: 60px 0px;
+    background-color: rgb(34, 51, 89);
+}
+
+.footerUniversidad {
+    display: inline;
+    float: right;
+    padding: 0px 10px;
+    width: 100%;
+}
+
+.footerUniversidad > ul > li > a {
+    color: rgb(255, 255, 255);
+}
+
+.footerUniversidad > ul > li > a:hover {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.footerUniversidad > h3 {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.footerUniversidad > p {
+    color: rgb(255, 255, 255);
+}
+
+.footerRedesSociales li a {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    float: left;
+    font-size: 22px;
+    padding: 0px 10px;
+}
+
+.footerBottom {
+    float: left;
+    display: inline;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: rgb(248, 248, 248);
+}
+
+.footerBottomIzq {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.footerBottomIzq > p,
+.footerBottomDer > p {
+    margin-bottom: 0px;
+}
+
+.footerBottomDer {
+    float: left;
+    display: inline;
+    width: 100%;
+    text-align: right;
+}
+
+
+/*****************************************************************************************/
+
+
+/*****************************************************************************************/
+
+#portada {
+    display: inline;
+    float: left;
+    height: 300px;
+    margin-top: 77px;
+    padding: 118px 0px;
+    text-align: center;
+    width: 100%;
+    background-image: url("../images/portada.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#portada h2 {
+    color: rgb(255, 255, 255);
+    font-size: 72px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+#descripcionBanner {
+    float: left;
+    display: inline;
+    width: 100%;
+    padding: 60px 0px;
+    min-height: 500px;
+    background-color: rgb(255, 255, 255);
+}
+
+.descripcionContenido {
+    float: left;
+    display: inline;
+    width: 100%;
+    font-size: 15px;
+}
+
+.descripcionContenido .descripcionCarrera {
+    margin-bottom: 30px;
+}
+
+.paginacion li a {
+    transition: all 0.5s;
+}
+
+.paginacion li a:hover,
+.paginacion li a:focus {
+    color: rgb(255, 255, 255);
+}
+
+.eventosSidebar {
+    float: left;
+    display: inline;
+    width: 100%;
+    padding: 12px;
+    min-height: 500px;
+    background-color: rgb(255, 255, 255);
+}
+
+.seccionEventosSidebar {
+    float: left;
+    display: inline;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.seccionEventosSidebar > h2 {
+    font-family: 'Lato', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    text-align: center;
+    padding: 0px 5px;
+    margin-bottom: 15px;
+}
+
+.seccionEventosSidebar > h2 span {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+}
+
+.seccionEventosSidebar .seccionNuevasNoticias .media-body > a {
+    margin-top: 0px;
+}
+
+.seccionEventosSidebar > ul > li > a {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px;
+    transition: all 0.5s;
+}
+
+.seccionEventosSidebar > ul > li > a:hover,
+.seccionEventosSidebar > ul > li > a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.descripcionSeccionPortada {
+    float: left;
+    display: inline;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.descripcionPortada {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.descripcionPortada > img {
+    max-height: 350px;
+    width: 100%;
+}
+
+.descripcion-Carrera {
+    display: inline;
+    float: left;
+    margin-top: 35px;
+    width: 100%;
+}
+
+.descripcion-Carrera > h2 {
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.descripcion-Carrera > p {
+    font-size: 15px;
+    line-height: 1.9em;
+}
+
+.tablaMaterias {
+    background-color: rgb(255, 255, 255);
+}
+
+.tablaMaterias thead {
+    color: rgb(255, 255, 255);
+}
+
+.tablaMaterias thead > tr > th {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+
+/****************************************************************/
+
+
+/*  ACA NOS QUEDAMOS                    */
+
+
+/****************************************************************/
+
+.eventosArchivos {
+    display: inline;
+    float: left;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.imagenPortadaSite {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.imagenPort img {
+    height: 100%;
+    width: 100%;
+    transition: all 1s ease;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.imagenPort:hover img {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.tituloEvento {
+    display: block;
+    margin-bottom: 7px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    padding: 0px 15px;
+    transition: all 0.5s;
+}
+
+.tituloEvento a:hover {
+    text-decoration: none;
+    outline: none;
+}
+
+.fechayLugar {
+    float: left;
+    display: inline;
+    width: 100%;
+    padding: 0px 15px;
+}
+
+.fechayLugar > p {
+    color: rgb(136, 136, 136);
+    display: inline-block;
+    font-size: 15px;
+    font-weight: normal;
+    margin-right: 5px;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: rgb(204, 204, 204);
+    padding-right: 5px;
+    transition: all 0.5s;
+}
+
+.fechayLugar:last-child {
+    border-right-style: none;
+}
+
+.fechayLugar > p i {
+    margin-right: 5px;
+}
+
+.fechayLugar > a {
+    color: rgb(136, 136, 136);
+    font-size: 15px;
+    font-weight: normal;
+    transition: all 0.5s;
+}
+
+.fechayLugar > a i {
+    margin-right: 5px;
+}
+
+.eventoDescripcion {
+    color: rgb(155, 155, 155);
+    line-height: 18px;
+    margin: 10px 5px 10px 0px;
+    padding: 0px 15px;
+}
+
+.saberMasEvento {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    color: rgb(155, 155, 155);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: rgba(255, 255, 255, 0.298039) 0px 0px 1px;
+    font-size: 15px;
+    float: right;
+}
+
+.saberMasEvento:hover,
+.saberMasEvento:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.saberMasEvento::before,
+.saberMasEvento::after {
+    display: inline-block;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.saberMasEvento::before {
+    margin-right: 10px;
+    content: "[";
+    transform: translateX(20px);
+}
+
+.saberMasEvento::after {
+    margin-left: 10px;
+    content: "]";
+    transform: translateX(-20px);
+}
+
+.saberMasEvento:hover::before,
+.saberMasEvento:hover::after,
+.saberMasEvento:focus::before,
+.saberMasEvento:focus::after {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.portadaSitio {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.portadaSitio .tituloEvento {
+    padding-left: 0px;
+}
+
+.portadaSitio .fechayLugar {
+    padding-left: 0px;
+}
+
+.portadaSitio p {
+    line-height: 25px;
+    font-size: 15px;
+}
+
+.portadaSitio blockquote {
+    border-left-style: none;
+}
+
+.portadaSitio blockquote > span {
+    font-size: 25px;
+}
+
+.portadaSitio ul li {
+    line-height: 25px;
+}
+
+.portadaSitio ul li > span {
+    margin-right: 5px;
+}
+
+.portadaSitio {
+    display: inline;
+    float: left;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.eventoAnterior {
+    display: inline-block;
+    float: left;
+    padding: 8px 16px;
+    color: rgb(204, 204, 204);
+    border: 2px solid rgb(204, 204, 204);
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+.eventoAnterior:hover {
+    text-decoration: none;
+    outline: none;
+}
+
+.eventoAnterior > i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.eventoSiguiente {
+    display: inline-block;
+    float: right;
+    padding: 8px 16px;
+    color: rgb(204, 204, 204);
+    border: 2px solid rgb(204, 204, 204);
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+.eventoSiguiente:hover {
+    text-decoration: none;
+    outline: none;
+}
+
+.eventoSiguiente > i {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.tituloBarCyan {
+    float: left;
+    display: inline;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.tituloBarCyan > h2 {
+    font-family: 'Lato', sans-serif;
+    border-left-width: 5px;
+    border-left-style: solid;
+    font-size: 25px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.eventosDeslizadorSeccion {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.eventosDeslizador {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.eventosDeslizador .slick-prev {
+    height: 30px;
+    width: 30px;
+    background-image: url("../images/anterior.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.eventosDeslizador .slick-next {
+    height: 30px;
+    width: 30px;
+    background-image: url("../images/siguiente.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.eventosDeslizador .slick-prev,
+.eventosDeslizador .slick-next {
+    height: 45px;
+}
+
+.eventosDeslizador .slick-slide img {
+    display: block;
+    width: 100%;
+}
+
+
+/***********************************************/
+
+
+/*************************************************/
+
+#galeriaDeFotos {
+    display: inline;
+    float: left;
+    padding: 60px 0px;
+    width: 100%;
+}
+
+.areaDeFotos {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.areaDeFotos a {
+    display: inline-block;
+    height: 200px;
+    margin: 0px 9px 18px;
+    width: 23%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.areaDeFotos a > img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.areaDeFotos a:hover .fotos {
+    transform: scale(2.2);
+}
+
+.verFotos {
+    display: none;
+    left: -100%;
+    transition: all 0.5s;
+}
+
+.areaDeFotos a:hover .verFotos {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    height: 100%;
+    left: 0px;
+    padding-top: 34%;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0px;
+    width: 100%;
+    transition: all 0.5s;
+    background-color: rgba(0, 0, 0, 0.901961);
+}
+
+#contacto {
+    float: left;
+    display: inline;
+    width: 100%;
+    padding: 60px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.formularioContacto {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.ingresarDatos {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    display: inline;
+    float: left;
+    margin-bottom: 20px;
+    padding: 10px 12px;
+    transition: all 0.4s ease 0s;
+    width: 100%;
+}
+
+.datosTexto {
+    height: 45px;
+}
+
+.datosEmail {
+    height: 45px;
+}
+
+.datostxtArea {
+    height: 200px;
+    padding: 15px;
+}
+
+.datosEnviar {
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: all 0.4s ease 0s;
+    background-color: rgb(255, 255, 255);
+}
+
+.nuestraDireccion {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.nuestraDireccion > h3 {
+    margin-top: 0px;
+}
+
+.direccionContacto {
+    float: left;
+    display: inline;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.direccionContacto .footerRedesSociales li a {
+    color: rgb(204, 204, 204);
+}
+
+#mapa {
+    float: left;
+    display: inline;
+    width: 100%;
+    margin-bottom: -6px;
+}
+
+#error {
+    float: left;
+    display: inline;
+    width: 100%;
+    padding: 60px 0px;
+}
+
+.seccionNotFound {
+    display: inline;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+
+.seccionNotFound h1 {
+    display: inline-block;
+    font-size: 300px;
+    font-weight: 400;
+    position: relative;
+    vertical-align: middle;
+}
+
+.seccionNotFound h2 {
+    color: rgb(193, 192, 180);
+    font-size: 60px;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+}
+
+.seccionNotFound h3 {
+    font-size: 24px;
+    margin-top: 35px;
+}
+
+.seccionNotFound p {
+    font-size: 23px;
+    line-height: 31px;
+    margin: 36px auto 0px;
+    max-width: 630px;
+    padding: 9px 0px 8px;
+    position: relative;
+}
+
+.seccionNotFound p::before {
+    content: "";
+    left: 0px;
+    position: absolute;
+    top: 1px;
+    width: 100%;
+}
+
+.seccionNotFound p::after {
+    bottom: 1px;
+    content: "";
+    left: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+.seccionNotFound p > a {
+    color: rgb(121, 137, 146);
+    text-decoration: none;
+}
+
+@media (max-width: 1199px) {
+    .areaSliderCenter {
+        width: 60%;
+    }
+    .areaSliderCenter h2 {
+        font-family: 'Lato', sans-serif;
+        font-size: 30px;
+    }
+    .areaSliderRight {
+        left: 35%;
+    }
+    .singCourse_author > p {
+        font-size: 15px;
+    }
+    .side_add {
+        display: block;
+        width: 100%;
+    }
+    .side_add > img {
+        width: 100%;
+    }
+    .areaDeFotos a {
+        width: 22.5%;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-default .navbar-brand {
+        font-size: 18px;
+    }
+    .navbar-default .navbar-nav > li > a {
+        font-size: 12px;
+        padding: 30px 9px;
+    }
+    .navbar-nav > li > .dropdown-menu li a {
+        font-size: 12px;
+    }
+    .navbar-brand {
+        width: 160px;
+    }
+    .navbar-brand img {
+        max-width: 100%;
+    }
+    .areaSliderCenter {
+        width: 80%;
+    }
+    .areaSliderRight {
+        left: 15%;
+    }
+    .navCarreras {
+        padding-left: 15px;
+    }
+    .navCarreras .slick-prev {
+        left: -20px;
+    }
+    .nombreCarrera {
+        font-size: 18px;
+    }
+    .singCourse_author > p {
+        font-size: 10px;
+    }
+    .footerUniversidad > h3 {
+        font-size: 17px;
+    }
+    .seccionEventosSidebar > h2 {
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+    }
+    .seccionNuevasNoticias .media-body > a {
+        font-size: 12px;
+    }
+    .areaDeFotos a {
+        width: 30.3%;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav > li > a {
+        padding: 10px 20px;
+    }
+    .navbar-nav > li > .dropdown-menu {
+        left: 15px;
+    }
+    .navbar-nav > li > .dropdown-menu::before {
+        border-left-width: 10px;
+        border-left-style: solid;
+        border-left-color: transparent;
+        border-right-width: 10px;
+        border-right-style: solid;
+        border-right-color: transparent;
+        right: 65%;
+    }
+    .navbar-toggle {
+        margin-top: 15px;
+    }
+    .navbar-default .navbar-brand {
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+    .navbar-nav > li > .dropdown-menu::before {
+        display: none;
+    }
+    .areaSliderCenter {
+        width: 90%;
+    }
+    .areaSliderRight {
+        left: 5%;
+    }
+    .areaSliderCenter h2 {
+        font-family: 'Lato', sans-serif;
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .areaSlider {
+        margin-top: 66px;
+    }
+    .seccionSobreNosotros {
+        padding-right: 0px;
+        margin-bottom: 30px;
+    }
+    .descPorqueElegir {
+        margin-bottom: 30px;
+    }
+    .single_skill {
+        margin-bottom: 30px;
+    }
+    .single_stsTestimonial {
+        margin-bottom: 30px;
+    }
+    .footerBottomIzq {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .footerBottomDer {
+        text-align: center;
+    }
+    .footerUniversidad {
+        text-align: center;
+    }
+    .footerRedesSociales {
+        text-align: center;
+    }
+    .footerRedesSociales li {
+        display: inline-block;
+    }
+    #portada {
+        margin-top: 65px;
+    }
+    #portada h2 {
+        font-size: 50px;
+        font-family: 'Lato', sans-serif;
+    }
+    .descripcionContenido {
+        margin-bottom: 65px;
+    }
+    .areaDeFotos a {
+        width: 28.5%;
+    }
+    .nuestraDireccion {
+        margin-top: 50px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .areaSliderRight {
+        top: 15%;
+    }
+    .areaSliderCenter h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .areaSliderCenter p {
+        font-size: 13px;
+    }
+    .botonSlider {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+    .seccionNotFound h1 {
+        font-size: 100px;
+    }
+    #portada h2 {
+        font-size: 40px;
+    }
+    #portada {
+        height: 200px;
+        padding: 80px 0px;
+    }
+    .areaDeFotos a {
+        width: 100%;
+        margin-right: 0px;
+        margin-left: 0px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 360px) {
+    .seccionNotFound h1 {
+        font-size: 70px;
+    }
+    .seccionNotFound h2 {
+        font-size: 40px;
+    }
+    .seccionNotFound p {
+        font-size: 17px;
+    }
+    .seccionNotFound h1::after,
+    .seccionNotFound h1::before {
+        height: 15px;
+        width: 15px;
+    }
+    .seccionNotFound h1::after {
+        right: -30px;
+    }
+    .seccionNotFound h1::before {
+        left: -30px;
+    }
+    .noticiasBorder li a {
+        font-size: 14px;
+    }
+    #portada h2 {
+        font-size: 30px;
+    }
+    .tituloEvento {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .areaDeFotos a {
+        width: 100%;
+        margin-right: 0px;
+        margin-left: 0px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 320px) {}
+
+.direccionyContacto {
+    float: left;
+    display: inline;
+    width: 100%;
+    color: white;
+}
+
+.tabMaterias {
+    clear: both;
+}
+
+#nuestraHistoria {
+    float: left;
+    display: inline;
+    width: 100%;
+    padding: 0px 0px;
+    min-height: 500px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/*THEME FJKSDFSA*/
+
+.navbar-default .navbar-brand span {
+    color: #00AEF0;
+}
+
+.navbar-default .navbar-brand span {
+    color: #00AEF0;
+}
+
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+    color: #00AEF0;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #00AEF0;
+}
+
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover {
+    color: #00AEF0 !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #00AEF0;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+    background-color: transparent;
+    color: #00AEF0;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #00AEF0;
+}
+
+.slides-pagination a.current {
+    background-color: #00AEF0;
+}
+
+.botonSlider:hover,
+.botonSlider:focus {
+    color: #00AEF0;
+    border-color: #00AEF0;
+}
+
+.titulo:after {
+    background-color: #00AEF0;
+}
+
+.noticiasBorder {
+    border-bottom: 2px solid #00AEF0;
+}
+
+.noticiasBorder li.active a,
+.noticiasBorder li.active a:hover,
+.noticiasBorder li.active a:focus {
+    border: 2px solid;
+    color: #00AEF0 !important;
+    border-color: #00AEF0 #00AEF0 transparent;
+}
+
+.noticiasBorder li a:hover {
+    background-color: #00AEF0;
+}
+
+.seccionNuevasNoticias .media-body > a:hover {
+    color: #00AEF0;
+}
+
+.verTodos:hover,
+.verTodos:focus {
+    border-color: #00AEF0;
+    color: #00AEF0;
+}
+
+.single_notice_pane .slick-prev {
+    background-color: #00AEF0;
+}
+
+.single_notice_pane .slick-next {
+    background-color: #00AEF0;
+}
+
+.tituloPrincipal span {
+    background: none repeat scroll 0 0 #00AEF0;
+}
+
+.iconPorqueElegir {
+    background: none repeat scroll 0 0 #00AEF0;
+}
+
+.carreras-info:hover,
+.carreras-info:focus {
+    color: #00AEF0;
+}
+
+.nombreCarrera a:hover {
+    color: #00AEF0;
+}
+
+.duracionCarrera {
+    color: #00AEF0;
+}
+
+.tutors_thumb {
+    background: none repeat scroll 0 0 #00AEF0;
+}
+
+.singTutors_content>span {
+    background-color: #00AEF0;
+}
+
+.tutors_socnav li a:hover,
+.tutors_socnav li a:focus {
+    color: #00AEF0;
+    border-color: #00AEF0;
+}
+
+.tutors_nav .slick-dots li.slick-active {
+    border-color: #00AEF0;
+}
+
+.stsTestimonial_content > p {
+    color: #00AEF0;
+}
+
+.volverArriba:hover {
+    background-color: #00AEF0;
+}
+
+.footerBottomIzq a {
+    color: #00AEF0;
+}
+
+.paginacion li a {
+    color: #00AEF0;
+}
+
+.paginacion li a:hover,
+.paginacion li a:focus {
+    background-color: #00AEF0;
+}
+
+.eventosArchivos {
+    border-bottom: 3px solid #00AEF0;
+}
+
+.tituloEvento a:hover {
+    color: #00AEF0;
+}
+
+.fechayLugar > p:hover {
+    color: #00AEF0;
+}
+
+.fechayLugar>a:hover {
+    color: #00AEF0;
+}
+
+.saberMasEvento:hover,
+.saberMasEvento:focus {
+    color: #00AEF0;
+}
+
+.saberMasEvento:hover::before,
+.saberMasEvento:hover::after,
+.saberMasEvento:focus::before,
+.saberMasEvento:focus::after {
+    color: #00AEF0;
+}
+
+.tags_nav li a:hover,
+.tags_nav li a:focus {
+    background-color: #00AEF0;
+}
+
+.portadaSitio blockquote>span {
+    color: #00AEF0;
+}
+
+.portadaSitio ul li > span {
+    color: #00AEF0;
+}
+
+.eventoAnterior:hover {
+    color: #00AEF0;
+    border-color: #00AEF0;
+}
+
+.eventoSiguiente:hover {
+    color: #00AEF0;
+    border-color: #00AEF0;
+}
+
+.tituloBarCyan > h2 {
+    color: #00AEF0;
+}
+
+.eventosDeslizador .slick-prev,
+.eventosDeslizador .slick-next {
+    background-color: #00AEF0;
+}
+
+.seccionNotFound h1:after,
+.seccionNotFound h1:before {
+    border: 2px solid #00AEF0;
+}
+
+.seccionNotFound p>a:hover {
+    color: #00AEF0;
+}
+
+.seccionNotFound p:before {
+    border-top: 1px solid #00AEF0;
+}
+
+.seccionNotFound p:after {
+    border-top: 1px solid #00AEF0;
+}
+
+.seccionNotFound p {
+    border-bottom: 2px solid #00AEF0;
+    border-top: 2px solid #00AEF0;
+}
+
+.seccionNotFound h1 {
+    color: #00AEF0;
+}
+
+.ingresarDatos:focus {
+    border: 1px solid #00AEF0;
+}
+
+.datosEnviar {
+    border: 1px solid #00AEF0;
+    color: #00AEF0;
+}
+
+.datosEnviar:hover,
+.datosEnviar:focus {
+    background-color: #00AEF0;
+    color: #ffffff;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover {
+    color: #00AEF0 !important;
+}
+
+.seccionEventosSidebar > h2 {
+    background-color: #00AEF0;
+}
+
+.tablaMaterias thead {
+    background-color: #00AEF0;
+}
+
+.seccionEventosSidebar > ul > li>a:hover,
+.seccionEventosSidebar > ul > li>a:focus {
+    color: #00AEF0;
+}
+
+.seccionNuevasNoticias .media-body > a:hover {
+    color: #00AEF0;
+}

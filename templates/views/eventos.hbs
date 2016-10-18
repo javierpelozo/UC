@@ -1,0 +1,59 @@
+<section id="portada">
+	<h2>Eventos</h2>
+</section>
+
+<section id="descripcionBanner">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-8 col-sm-8">
+				<div class="descripcionContenido">
+					<div class="row">
+						<div class="col-lg-12 col-12 col-sm-12">
+							<div class="eventosArchivos wow fadeInUp">
+									{{# each data.posts.results}}
+										<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
+											<div class="imagenPortadaSite">
+												<a class="imagenPort">
+													{{#if image}}<img alt="img" src="{{{cloudinaryUrl image crop='fit' }}}">{{/if}}
+												</a>
+											</div>
+											<h2 class="tituloEvento"><a href="{{postUrl slug}}">{{{title}}}</a></h2>
+											<div class="fechayLugar">
+												<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
+													<p><i class="fa fa-clock-o"></i>{{{publishedDate}}}</p>
+													<p><i class="fa fa-map-marker"></i>Lugar: San Ignacio Misiones</p>
+												</p>
+											</div>
+											<p class="eventoDescripcion">
+												{{{content.brief}}}
+											</p>
+											<a class="saberMasEvento" href="{{postUrl slug}}">Saber más</a>
+											{{#if content.extended}}<p class="saberMasEvento"><a href="{{postUrl slug}}">Leer más...</a></p>{{/if}}
+										</div>
+									{{/each}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{>eventosSidebar}}
+
+			<div class="col-lg-4 col-sm-4 col-md-3">
+				<div class="eventosSidebar">
+					<div class="seccionEventosSidebar">
+						<h2>Categorías</h2>
+						<div>
+							<a href="/eventos" class="active list-group-item">Todas las categorías</a>
+							{{# each data.categories }}
+							<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
+							{{/each}}
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{{>pagination}}
+	</div>
+</section>

@@ -1,0 +1,31 @@
+<div class="descripcionBanner">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-8 col-sm-8">
+				<div class="descripcionContenido">
+					<div class="row">
+						<div class="col-lg-12 col-12 col-sm-12">
+							<div class="portadaSitio">
+								<div class="seccion-eventos-slider">
+									<div class="eventosDeslizador">
+										{{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image width=750 height=450 crop='fit' }}}" class="img-responsive">{{/if}}
+									</div>
+									<h2 class="tituloEvento">{{data.post.title}}</h2>
+									<div class="fechayLugar">
+										<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
+											<p><i class="fa fa-clock-o"></i>{{{publishedDate}}}</p>
+											<p><i class="fa fa-map-marker"></i>Lugar: San Ignacio Misiones</p>
+										</p>
+										<p>
+											{{{data.post.content.extended}}}
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
