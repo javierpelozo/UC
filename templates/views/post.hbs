@@ -1,4 +1,7 @@
-<div class="descripcionBanner">
+<section id="portada">
+	<h2>{{data.post.title}}</h2>
+</section>
+<section class="descripcionBanner">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-md-8 col-sm-8">
@@ -8,8 +11,9 @@
 							<div class="portadaSitio">
 								<div class="seccion-eventos-slider">
 									<div class="eventosDeslizador">
-										{{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image width=750 height=450 crop='fit' }}}" class="img-responsive">{{/if}}
+										{{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image}}}" alt="img">{{/if}}
 									</div>
+								</div>
 									<h2 class="tituloEvento">{{data.post.title}}</h2>
 									<div class="fechayLugar">
 										<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
@@ -20,7 +24,6 @@
 											{{{data.post.content.extended}}}
 										</p>
 									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -28,4 +31,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
