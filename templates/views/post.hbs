@@ -11,7 +11,7 @@
 							<div class="portadaSitio">
 								<div class="seccion-eventos-slider">
 									<div class="eventosDeslizador">
-										{{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image}}}" alt="img">{{/if}}
+										{{#if data.post.image}}<div><img src="{{{cloudinaryUrl data.post.image}}}" alt="img"></div>{{/if}}
 									</div>
 								</div>
 									<h2 class="tituloEvento">{{data.post.title}}</h2>
@@ -20,11 +20,22 @@
 											<p><i class="fa fa-clock-o"></i>{{{publishedDate}}}</p>
 											<p><i class="fa fa-map-marker"></i>Lugar: San Ignacio Misiones</p>
 										</p>
+									</div>
 										<p>
 											{{{data.post.content.extended}}}
 										</p>
-									</div>
+
 							</div>
+						</div>
+						<div class="masEventosSiguiente">
+							<a href="#" class="eventoAnterior wow fadeInLeft">
+								<i class="fa fa-angle-left"></i>
+								Anterior
+							</a>
+							<a href="#" class="eventoSiguiente wow fadeInRight">
+								<i class="fa fa-angle-right"></i>
+								Siguiente
+							</a>
 						</div>
 					</div>
 				</div>
