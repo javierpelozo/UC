@@ -21,19 +21,17 @@
 						<input type="hidden" name="action" value="contacto">
 						<input type="text" name="name.full"  class="ingresarDatos datosTexto" value="{{formData.[name.full]}}" placeholder="Ingrese su nombre" required>
 						<input type="email" name="email" class="ingresarDatos datosEmail" value="{{formData.email}}" placeholder="Ingrese su correo" required>
-						<input type="text" name="phone" placeholder="(opcional)" class="ingresarDatos datosTexto" value="{{formData.phone}}" placeholder="Ingrese su teléfono (opcional)">
-
-						<div>
-							<label>¿Cuál es el motivo?</label>
-							<select name="enquiryType" class="ingresarDatos datosTexto" placeholder="lalala">
-								<option value="">(selecciona uno)</option>
-								{{#each enquiryTypes}}
-								<option value="{{value}}">{{label}}</option>
-								{{/each}}
-							</select>
-						</div>
-
+						<input type="text" name="phone" placeholder="Ingrese su teléfono (opcional)" class="ingresarDatos datosTexto" value="{{formData.phone}}">
 							<textarea name="message" placeholder="Escriba su mensaje..." cols="30" rows="10" class="ingresarDatos datostxtArea" placeholder="Mensaje..." required>{{formData.message}}</textarea>
+							<div>
+								<label>¿Cuál es el motivo?</label>
+								<select name="enquiryType" class="ingresarDatos datosTexto" placeholder="lalala">
+									<option value="">(selecciona uno)</option>
+									{{#each enquiryTypes}}
+									<option value="{{value}}">{{label}}</option>
+									{{/each}}
+								</select>
+							</div>
 						<div class="form-actions">
 							<button type="submit" class="datosEnviar btn btn-primary">Enviar</button>
 						</div>
