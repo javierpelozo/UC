@@ -37,23 +37,7 @@
 				</div>
 			</div>
 			{{>eventosSidebar}}
-
-			<div class="col-lg-4 col-sm-4 col-md-3">
-				<div class="eventosSidebar">
-					<div class="seccionEventosSidebar">
-						<h2>Categorías</h2>
-						<div>
-							<a href="/eventos" class="active list-group-item">Todas las categorías</a>
-							{{# each data.categories }}
-							<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
-							{{/each}}
-						</div>
-
-					</div>
-				</div>
-			</div>
 		</div>
-
 		{{>pagination}}
 	</div>
 </section>
