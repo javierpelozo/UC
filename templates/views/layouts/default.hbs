@@ -33,7 +33,7 @@
 		<a class="volverArriba" href="#" data-toggle="tooltip" data-placement="top" title="Volver arriba"></a>
 		<header id="cabecera">
 			<div class="areaDeMenu">
-				<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 					<div class="container">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -45,7 +45,7 @@
 							<a href="/" class="navbar-brand">Universidad <span>Católica</span></a>
 						</div>
 						<div id="navbar" class="navbar-collapse collapse">
-							<ul id="top-menu "class="nav navbar-nav navbar-right main-nav">
+							<ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
 								{{# each navLinks}}
 								<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
 									<a href="{{ href }}">{{ label }}</a>
