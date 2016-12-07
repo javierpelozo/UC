@@ -1,18 +1,16 @@
 require('dotenv').config();
-
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
 
 keystone.init({
 	'name': 'ucsi',
 	'brand': 'ucsi',
-
 	'sass': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'hbs',
-
+	
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
 		partialsDir: 'templates/views/partials',
@@ -62,10 +60,10 @@ keystone.Email.defaults.templateEngine = require('handlebars');
 
 
 keystone.set('nav', {
-	posts: ['posts', 'post-categories'],
+/*	posts: ['posts', 'post-categories'],
 	galleries: 'galleries',
 	enquiries: 'enquiries',
-	users: 'users',
+	users: 'users',*/
 });
 
 keystone.start();
