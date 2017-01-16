@@ -11,3 +11,5 @@ node_modules
 .env
 updates
 0.0.1-admins.js
+.editorconfig
+.eslintignore
