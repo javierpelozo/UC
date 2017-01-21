@@ -28,6 +28,4 @@ exports = module.exports = function (app) {
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 
 };
-//Cuando otro proyecto no me deja programar otra cosa y tengo que comentar para no perder mi cuadrito verde (?)
-//Cuando otro proyecto no me deja programar otra cosa y tengo que comentar para no perder mi cuadrito verde (?)
-// Bueno, basta (?)
+
