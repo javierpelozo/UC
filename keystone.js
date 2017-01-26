@@ -62,10 +62,10 @@ keystone.Email.defaults.templateEngine = require('handlebars');
 
 keystone.set('nav', {
 	posts: ['posts', 'post-categories'],
-	galleries: 'galleries',
-	enquiries: 'enquiries',
 	users: 'users',
 });
 
 keystone.start();
-
+//Cuando otro proyecto no me deja programar otra cosa y tengo que comentar para no perder mi cuadrito verde (?)
+//Cuando otro proyecto no me deja programar otra cosa y tengo que comentar para no perder mi cuadrito verde (?)
+// Bueno, basta (?)
